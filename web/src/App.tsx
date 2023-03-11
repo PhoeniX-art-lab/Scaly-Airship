@@ -4,6 +4,7 @@ import React from "react"
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import "./App.css"
 import Users from "./components/Users"
+import Landing from "./components/Landing"
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
 
@@ -31,6 +32,9 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <Switch>
+          <Route path="/landing" >
+            <Landing />
+          </Route>
           <Route path="/signup">
             <Signup />
           </Route>
