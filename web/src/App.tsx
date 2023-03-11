@@ -4,6 +4,7 @@ import React from "react"
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import "./App.css"
 import Users from "./components/Users"
+import Login from "./pages/Login"
 import Signup from "./pages/Signup"
 
 
@@ -32,6 +33,9 @@ function App() {
         <Switch>
           <Route path="/signup">
             <Signup />
+          </Route>
+          <Route path="/login">
+            <Login />
           </Route>
           <Route path="/">
             <Users />
