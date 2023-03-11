@@ -3,11 +3,13 @@ import { setContext } from 'apollo-link-context'
 import React from "react"
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import "./App.css"
+import "./styles/primary.css"
 import Users from "./components/Users"
 import Landing from "./components/Landing"
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
-
+import IsAuthenticated from "./components/IsAuthenticated"
+import LeftNav from "./components/LeftNav"
 
 const httpLink = new HttpLink({ uri: 'http://localhost:4000' })
 const authLink = setContext(async (req, { headers }) => {
@@ -41,9 +43,16 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/">
-            <Users />
-          </Route>
+          <IsAuthenticated>
+            <Route path="/">
+              <div className="primary">
+                <div className="left">
+                  <LeftNav />
+                </div>
+              </div>
+              <Users />
+            </Route>
+          </IsAuthenticated>
         </Switch>
       </Router>
     </ApolloProvider>
