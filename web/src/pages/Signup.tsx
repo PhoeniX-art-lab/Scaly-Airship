@@ -72,13 +72,37 @@ function Signup() {
             >
                 <Form>
                     <Field name="email" type="text" placeholder="Email" />
-                    <ErrorMessage name="email" component={'div'} />
+                    <ErrorMessage name="email" component={'div'}>
+                        {errorMsg =>
+                            <div style={{ color: "red", marginBottom: "5px", marginTop: "0px" }}>
+                                {errorMsg}
+                            </div>
+                        }
+                    </ErrorMessage>
                     <Field name="name" type="text" placeholder="Name" />
-                    <ErrorMessage name="name" component={'div'} />
+                    <ErrorMessage name="name" component={'div'} >
+                        {errorMsg =>
+                            <div style={{ color: "red", marginBottom: "5px", marginTop: "0px" }}>
+                                {errorMsg}
+                            </div>
+                        }
+                    </ErrorMessage>
                     <Field name="password" type="password" placeholder="Password" />
-                    <ErrorMessage name="password" component={'div'} />
+                    <ErrorMessage name="password" component={'div'} >
+                        {errorMsg =>
+                            <div style={{ color: "red", marginBottom: "5px", marginTop: "0px" }}>
+                                {errorMsg}
+                            </div>
+                        }
+                    </ErrorMessage>
                     <Field name="confirmPassword" type="password" placeholder="Confirm Password" />
-                    <ErrorMessage name="confirmPassword" component={'div'} />
+                    <ErrorMessage name="confirmPassword" component={'div'} >
+                        {errorMsg =>
+                            <div style={{ color: "red", marginBottom: "5px", marginTop: "0px" }}>
+                                {errorMsg}
+                            </div>
+                        }
+                    </ErrorMessage>
                     <button type="submit" className="login-button"><span>Sign up</span></button>
                 </Form>
 
