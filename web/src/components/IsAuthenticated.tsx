@@ -20,11 +20,11 @@ interface Props {
 function IsAuthenticated({ children }: Props) {
     const { loading, error, data } = useQuery(IS_LOGGED_IN)
 
+    // console.log(data)
+    // console.log(error)
     if (loading) return <p>Loading...</p>
-    if (error)
-        return <p>{error.message}</p>
 
-    if (!data.me) {
+    if (error || !data.me) {
         return <Redirect to={{ pathname: "/landing" }}
         />
     }
