@@ -45,9 +45,15 @@ function Profile() {
                 <h3>{data.me.name}</h3>
               </span>
             </div>
-            <div className="avatar">
-              <i className="fa fa-user fa-5x" aria-hidden="true"></i>
-            </div>
+            {data.me.Profile && data.me.Profile.avatar ? (
+                <img
+                  src={data.me.Profile.avatar}
+                  style={{ width: "150px", borderRadius: "50%" }}
+                  alt="avatar"
+                />
+              ) : (
+                <i className="fa fa-user fa-5x" aria-hidden="true"></i>
+              )}
             <div className="make-profile">
               {data.me.Profile ? <UpdateProfile /> : <CreateProfile />}
             </div>
