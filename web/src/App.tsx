@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import "./App.css"
 import IsAuthenticated from "./components/IsAuthenticated"
 import Landing from "./components/Landing"
-import Users from "./components/Users"
+import Home from "./pages/Home"
 import Login from "./pages/Login"
 import Profile from "./pages/Profile"
 import Signup from "./pages/Signup"
@@ -48,8 +48,8 @@ function App() {
             <Login />
           </Route>
           <IsAuthenticated>
-            <Route path="/users">
-              <Users />
+            <Route exact path="/">
+              <Home />
             </Route>
             <Route path="/profile">
               <Profile />

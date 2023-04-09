@@ -116,7 +116,6 @@ function UpdateProfile() {
                 <i
                   className="fa fa-user fa-5x"
                   aria-hidden="true"
-                  onClick={() => inputFile.current.click()}
                 ></i>
               </span>
             )}
