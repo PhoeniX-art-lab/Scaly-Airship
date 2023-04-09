@@ -61,7 +61,9 @@ function UpdateProfile() {
 
   return (
     <div>
-      <button onClick={openModal}>Update Profile</button>
+      <button onClick={openModal} className="edit-button">
+        Edit Profile
+      </button>
       <Modal
         isOpen={modalIsOpon}
         onRequestClose={closeModal}
