@@ -8,10 +8,10 @@ import Tweet from "./Tweet"
 function LeftNav() {
   return (
     <div>
-      <Link to="/users">
+      <Link to="/">
         <img src={favicon} alt="logo" style={{ width: "40px" }} />
       </Link>
-      <Link to="/users">
+      <Link to="/">
         <h2>
           <i className="fa fa-home" aria-hidden="true"></i>{" "}
           <span className="title">Home</span>

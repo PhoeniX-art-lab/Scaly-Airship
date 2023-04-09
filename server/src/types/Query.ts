@@ -23,14 +23,12 @@ export const Query = queryType({
       },
     })
 
-    // t.list.field('feed', {
-    //   type: 'Post',
-    //   resolve: (parent, args, ctx) => {
-    //     return ctx.prisma.post.findMany({
-    //       where: { published: true },
-    //     })
-    //   },
-    // })
+    t.list.field("tweets", {
+      type: "Tweet",
+      resolve: (parent, args, ctx) => {
+        return ctx.prisma.tweet.findMany()
+      }
+    })
 
     t.field('tweet', {
       type: 'Tweet',

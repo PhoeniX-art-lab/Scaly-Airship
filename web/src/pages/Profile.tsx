@@ -41,9 +41,6 @@ function Profile() {
               <span className="back-arrow" onClick={() => history.goBack()}>
                 <i className="fa fa-arrow-left" aria-hidden="true"></i>
               </span>
-              <span className="nickname">
-                <h3>{data.me.name}</h3>
-              </span>
             </div>
             {data.me.Profile && data.me.Profile.avatar ? (
                 <img
